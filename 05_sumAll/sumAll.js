@@ -1,5 +1,12 @@
-const sumAll = function() {
+const sumAll = function (start, end) {
+  // Ensure the range is from the smaller to the larger number
+  if (start > end) [start, end] = [end, start];
 
+  let sum = 0;
+  for (let i = start; i <= end; i++) {
+    sum += i;
+  }
+  return sum;
 };
 
 // Do not edit below this line
